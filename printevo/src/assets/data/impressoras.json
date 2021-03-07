@@ -1,8 +1,0 @@
-[
-    {"id":1,  "marca": "Epson",   "modelo": "A1A1A1A1A1", "total_ini": "123456", "total_fim": "98989898"},
-    {"id":2,  "marca": "Samsung", "modelo": "B2B2B2B2B2", "total_ini": "233534", "total_fim": "97878788"},
-    {"id":3,  "marca": "Canon",   "modelo": "C3C3C3C3C3", "total_ini": "657567", "total_fim": "76765765"},
-    {"id":4,  "marca": "Samsung", "modelo": "D4D4D4D4D4", "total_ini": "567567", "total_fim": "56465465"},
-    {"id":5,  "marca": "Epson",   "modelo": "E55E5E5E5E", "total_ini": "979879", "total_fim": "48768768"},
-	{"id":6,  "marca": "HP",      "modelo": "F6F6F6F6F6", "total_ini": "090933", "total_fim": "76898798"}
-]

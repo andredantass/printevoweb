@@ -38,6 +38,7 @@
     "@swimlane/ngx-datatable": "16.0.2",
     "@toverux/ngx-sweetalert2": "^4.0.0",
     "angular-calendar": "0.27.18",
+    "angular-cli-ghpages": "^0.6.2",
     "angular2-text-mask": "9.0.0",
     "bootstrap": "4.3.1",
     "classlist.js": "^1.1.20150312",

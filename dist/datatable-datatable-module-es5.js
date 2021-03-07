@@ -1,0 +1,1121 @@
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["datatable-datatable-module"], {
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/data-table/data-table.component.html":
+  /*!******************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/data-table/data-table.component.html ***!
+    \******************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableDataTableDataTableComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ngx-datatable class=\"fullscreen no-shadow rounded-0\" [columnMode]=\"'force'\" [headerHeight]=\"40\" [footerHeight]=\"0\"\r\n  [rowHeight]=\"40\" [scrollbarV]=\"true\" [scrollbarH]=\"true\" [rows]=\"rows\">\r\n  <ngx-datatable-column name=\"Id\" [width]=\"80\"></ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Name\" [width]=\"300\"></ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Gender\"></ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Age\"></ngx-datatable-column>\r\n  <ngx-datatable-column name=\"City\" [width]=\"300\" prop=\"address.city\"></ngx-datatable-column>\r\n  <ngx-datatable-column name=\"State\" [width]=\"300\" prop=\"address.state\"></ngx-datatable-column>\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-editing/table-editing.component.html":
+  /*!************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-editing/table-editing.component.html ***!
+    \************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableTableEditingTableEditingComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ngx-datatable #mydatatable [headerHeight]=\"40\" [limit]=\"5\" [columnMode]=\"'force'\" [footerHeight]=\"50\" [rowHeight]=\"'auto'\"\r\n  [rows]=\"rows\">\r\n  <ngx-datatable-column name=\"Name\">\r\n    <ng-template ngx-datatable-cell-template let-value=\"value\" let-row=\"row\">\r\n      <span title=\"Double click to edit\" (dblclick)=\"editing[row.$$index + '-name'] = true\" *ngIf=\"!editing[row.$$index + '-name']\">\r\n        {{value}}\r\n      </span>\r\n      <input autofocus (blur)=\"updateValue($event, 'name', value, row)\" *ngIf=\"editing[row.$$index + '-name']\" type=\"text\"\r\n        [value]=\"value\" />\r\n    </ng-template>\r\n  </ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Gender\">\r\n    <ng-template ngx-datatable-cell-template let-row=\"row\" let-value=\"value\">\r\n      <span title=\"Double click to edit\" (dblclick)=\"editing[row.$$index + '-gender'] = true\" *ngIf=\"!editing[row.$$index + '-gender']\">\r\n        {{value}}\r\n      </span>\r\n      <select *ngIf=\"editing[row.$$index + '-gender']\" (change)=\"updateValue($event, 'gender', value, row)\" [value]=\"value\">\r\n        <option value=\"male\">Male</option>\r\n        <option value=\"female\">Female</option>\r\n      </select>\r\n    </ng-template>\r\n  </ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Age\">\r\n    <ng-template ngx-datatable-cell-template let-value=\"value\">\r\n      {{value}}\r\n    </ng-template>\r\n  </ngx-datatable-column>\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-filter/table-filter.component.html":
+  /*!**********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-filter/table-filter.component.html ***!
+    \**********************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableTableFilterTableFilterComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<input type=\"email\" class=\"form-control mb-3\" placeholder=\"Type to filter the name column...\" required (keyup)='updateFilter($event)'>\r\n<ngx-datatable [columns]=\"columns\" [columnMode]=\"'force'\" [headerHeight]=\"40\" [footerHeight]=\"50\" [rowHeight]=\"'auto'\"\r\n  [limit]=\"10\" [rows]='rows'>\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-paging/table-paging.component.html":
+  /*!**********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-paging/table-paging.component.html ***!
+    \**********************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableTablePagingTablePagingComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ngx-datatable [rows]=\"rows\" [columns]=\"[{name:'Name'},{name:'Gender'},{name:'Company'}]\" [columnMode]=\"'force'\"\r\n  [headerHeight]=\"40\" [footerHeight]=\"50\" [rowHeight]=\"'auto'\" [externalPaging]=\"true\" [count]=\"count\" [offset]=\"offset\"\r\n  [limit]=\"limit\" (page)='onPage($event)'>\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-pinning/table-pinning.component.html":
+  /*!************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-pinning/table-pinning.component.html ***!
+    \************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableTablePinningTablePinningComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ngx-datatable [columnMode]=\"'force'\" [headerHeight]=\"40\" [footerHeight]=\"50\" [rowHeight]=\"40\" [scrollbarV]=\"true\"\r\n  [scrollbarH]=\"true\" [rows]=\"rows\">\r\n  <ngx-datatable-column name=\"Name\" [width]=\"300\" [frozenLeft]=\"true\">\r\n  </ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Gender\">\r\n  </ngx-datatable-column>\r\n  <ngx-datatable-column name=\"Age\">\r\n  </ngx-datatable-column>\r\n  <ngx-datatable-column name=\"City\" [width]=\"150\" prop=\"address.city\">\r\n  </ngx-datatable-column>\r\n  <ngx-datatable-column name=\"State\" [width]=\"300\" prop=\"address.state\" [frozenRight]=\"true\">\r\n  </ngx-datatable-column>\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-selection/table-selection.component.html":
+  /*!****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-selection/table-selection.component.html ***!
+    \****************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableTableSelectionTableSelectionComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ngx-datatable class=\"selection-cell\" [rows]=\"rows\" [columnMode]=\"'force'\" [columns]=\"columns\" [headerHeight]=\"40\"\r\n  [footerHeight]=\"50\" [rowHeight]=\"40\" [selected]=\"selected\" [selectionType]=\"'cell'\" (select)=\"onSelect($event)\"\r\n  (activate)=\"onActivate($event)\">\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-sorting/table-sorting.component.html":
+  /*!************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-sorting/table-sorting.component.html ***!
+    \************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDatatableTableSortingTableSortingComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ngx-datatable [rows]=\"rows\" [columns]=\"columns\" [sortType]=\"'multi'\" [columnMode]=\"'force'\" [headerHeight]=\"40\"\r\n  [footerHeight]=\"50\" [rowHeight]=\"40\">\r\n</ngx-datatable>\r\n";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/data-table/data-table.component.scss":
+  /*!****************************************************************!*\
+    !*** ./src/app/datatable/data-table/data-table.component.scss ***!
+    \****************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableDataTableDataTableComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".datatable,\n.datatable > div,\n.datatable.fixed-header .datatable-header .datatable-header-inner {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGF0YXRhYmxlL2RhdGEtdGFibGUvQzpcXFVzZXJzXFxhbmRyZVxcRG9jdW1lbnRzXFxXb3Jrc3BhY2VcXFByaW50RXZvQXBwXFxwcmludGV2b3dlYi9zcmNcXGFwcFxcZGF0YXRhYmxlXFxkYXRhLXRhYmxlXFxkYXRhLXRhYmxlLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXRhdGFibGUvZGF0YS10YWJsZS9kYXRhLXRhYmxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7RUFHRSxZQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9kYXRhdGFibGUvZGF0YS10YWJsZS9kYXRhLXRhYmxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRhdGF0YWJsZSxcclxuLmRhdGF0YWJsZT5kaXYsXHJcbi5kYXRhdGFibGUuZml4ZWQtaGVhZGVyIC5kYXRhdGFibGUtaGVhZGVyIC5kYXRhdGFibGUtaGVhZGVyLWlubmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuIiwiLmRhdGF0YWJsZSxcbi5kYXRhdGFibGUgPiBkaXYsXG4uZGF0YXRhYmxlLmZpeGVkLWhlYWRlciAuZGF0YXRhYmxlLWhlYWRlciAuZGF0YXRhYmxlLWhlYWRlci1pbm5lciB7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/data-table/data-table.component.ts":
+  /*!**************************************************************!*\
+    !*** ./src/app/datatable/data-table/data-table.component.ts ***!
+    \**************************************************************/
+
+  /*! exports provided: DataTableComponent */
+
+  /***/
+  function srcAppDatatableDataTableDataTableComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DataTableComponent", function () {
+      return DataTableComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var DataTableComponent = /*#__PURE__*/function () {
+      function DataTableComponent() {
+        var _this = this;
+
+        _classCallCheck(this, DataTableComponent);
+
+        this.rows = [];
+        this.fetch(function (data) {
+          _this.rows = data;
+        });
+      }
+
+      _createClass(DataTableComponent, [{
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/100k.json");
+
+          req.onload = function () {
+            cb(JSON.parse(req.response));
+          };
+
+          req.send();
+        }
+      }]);
+
+      return DataTableComponent;
+    }();
+
+    DataTableComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-data-table',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./data-table.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/data-table/data-table.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./data-table.component.scss */
+      "./src/app/datatable/data-table/data-table.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], DataTableComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/datatable.module.ts":
+  /*!***********************************************!*\
+    !*** ./src/app/datatable/datatable.module.ts ***!
+    \***********************************************/
+
+  /*! exports provided: DatatableModule */
+
+  /***/
+  function srcAppDatatableDatatableModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DatatableModule", function () {
+      return DatatableModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @swimlane/ngx-datatable */
+    "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+    /* harmony import */
+
+
+    var _datatable_routing__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./datatable.routing */
+    "./src/app/datatable/datatable.routing.ts");
+    /* harmony import */
+
+
+    var _data_table_data_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./data-table/data-table.component */
+    "./src/app/datatable/data-table/data-table.component.ts");
+    /* harmony import */
+
+
+    var _table_editing_table_editing_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./table-editing/table-editing.component */
+    "./src/app/datatable/table-editing/table-editing.component.ts");
+    /* harmony import */
+
+
+    var _table_filter_table_filter_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./table-filter/table-filter.component */
+    "./src/app/datatable/table-filter/table-filter.component.ts");
+    /* harmony import */
+
+
+    var _table_paging_table_paging_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! ./table-paging/table-paging.component */
+    "./src/app/datatable/table-paging/table-paging.component.ts");
+    /* harmony import */
+
+
+    var _table_pinning_table_pinning_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ./table-pinning/table-pinning.component */
+    "./src/app/datatable/table-pinning/table-pinning.component.ts");
+    /* harmony import */
+
+
+    var _table_selection_table_selection_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./table-selection/table-selection.component */
+    "./src/app/datatable/table-selection/table-selection.component.ts");
+    /* harmony import */
+
+
+    var _table_sorting_table_sorting_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./table-sorting/table-sorting.component */
+    "./src/app/datatable/table-sorting/table-sorting.component.ts");
+
+    var DatatableModule = function DatatableModule() {
+      _classCallCheck(this, DatatableModule);
+    };
+
+    DatatableModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(_datatable_routing__WEBPACK_IMPORTED_MODULE_5__["DatatableRoutes"]), _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_4__["NgxDatatableModule"]],
+      declarations: [_data_table_data_table_component__WEBPACK_IMPORTED_MODULE_6__["DataTableComponent"], _table_editing_table_editing_component__WEBPACK_IMPORTED_MODULE_7__["TableEditingComponent"], _table_filter_table_filter_component__WEBPACK_IMPORTED_MODULE_8__["TableFilterComponent"], _table_paging_table_paging_component__WEBPACK_IMPORTED_MODULE_9__["TablePagingComponent"], _table_pinning_table_pinning_component__WEBPACK_IMPORTED_MODULE_10__["TablePinningComponent"], _table_selection_table_selection_component__WEBPACK_IMPORTED_MODULE_11__["TableSelectionComponent"], _table_sorting_table_sorting_component__WEBPACK_IMPORTED_MODULE_12__["TableSortingComponent"]]
+    })], DatatableModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/datatable.routing.ts":
+  /*!************************************************!*\
+    !*** ./src/app/datatable/datatable.routing.ts ***!
+    \************************************************/
+
+  /*! exports provided: DatatableRoutes */
+
+  /***/
+  function srcAppDatatableDatatableRoutingTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DatatableRoutes", function () {
+      return DatatableRoutes;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _data_table_data_table_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./data-table/data-table.component */
+    "./src/app/datatable/data-table/data-table.component.ts");
+    /* harmony import */
+
+
+    var _table_editing_table_editing_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./table-editing/table-editing.component */
+    "./src/app/datatable/table-editing/table-editing.component.ts");
+    /* harmony import */
+
+
+    var _table_filter_table_filter_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./table-filter/table-filter.component */
+    "./src/app/datatable/table-filter/table-filter.component.ts");
+    /* harmony import */
+
+
+    var _table_paging_table_paging_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./table-paging/table-paging.component */
+    "./src/app/datatable/table-paging/table-paging.component.ts");
+    /* harmony import */
+
+
+    var _table_pinning_table_pinning_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./table-pinning/table-pinning.component */
+    "./src/app/datatable/table-pinning/table-pinning.component.ts");
+    /* harmony import */
+
+
+    var _table_selection_table_selection_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./table-selection/table-selection.component */
+    "./src/app/datatable/table-selection/table-selection.component.ts");
+    /* harmony import */
+
+
+    var _table_sorting_table_sorting_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./table-sorting/table-sorting.component */
+    "./src/app/datatable/table-sorting/table-sorting.component.ts");
+
+    var DatatableRoutes = [{
+      path: '',
+      children: [{
+        path: 'fullscreen',
+        component: _data_table_data_table_component__WEBPACK_IMPORTED_MODULE_1__["DataTableComponent"],
+        data: {
+          heading: 'Fullscreen'
+        }
+      }, {
+        path: 'editing',
+        component: _table_editing_table_editing_component__WEBPACK_IMPORTED_MODULE_2__["TableEditingComponent"],
+        data: {
+          heading: 'Editing'
+        }
+      }, {
+        path: 'filter',
+        component: _table_filter_table_filter_component__WEBPACK_IMPORTED_MODULE_3__["TableFilterComponent"],
+        data: {
+          heading: 'Filter'
+        }
+      }, {
+        path: 'paging',
+        component: _table_paging_table_paging_component__WEBPACK_IMPORTED_MODULE_4__["TablePagingComponent"],
+        data: {
+          heading: 'Paging'
+        }
+      }, {
+        path: 'pinning',
+        component: _table_pinning_table_pinning_component__WEBPACK_IMPORTED_MODULE_5__["TablePinningComponent"],
+        data: {
+          heading: 'Pinning'
+        }
+      }, {
+        path: 'selection',
+        component: _table_selection_table_selection_component__WEBPACK_IMPORTED_MODULE_6__["TableSelectionComponent"],
+        data: {
+          heading: 'Selection'
+        }
+      }, {
+        path: 'sorting',
+        component: _table_sorting_table_sorting_component__WEBPACK_IMPORTED_MODULE_7__["TableSortingComponent"],
+        data: {
+          heading: 'Sorting'
+        }
+      }]
+    }];
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-editing/table-editing.component.scss":
+  /*!**********************************************************************!*\
+    !*** ./src/app/datatable/table-editing/table-editing.component.scss ***!
+    \**********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableTableEditingTableEditingComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RhdGF0YWJsZS90YWJsZS1lZGl0aW5nL3RhYmxlLWVkaXRpbmcuY29tcG9uZW50LnNjc3MifQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-editing/table-editing.component.ts":
+  /*!********************************************************************!*\
+    !*** ./src/app/datatable/table-editing/table-editing.component.ts ***!
+    \********************************************************************/
+
+  /*! exports provided: TableEditingComponent */
+
+  /***/
+  function srcAppDatatableTableEditingTableEditingComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TableEditingComponent", function () {
+      return TableEditingComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var TableEditingComponent = /*#__PURE__*/function () {
+      function TableEditingComponent() {
+        var _this2 = this;
+
+        _classCallCheck(this, TableEditingComponent);
+
+        this.editing = {};
+        this.rows = [];
+        this.fetch(function (data) {
+          _this2.rows = data;
+        });
+      }
+
+      _createClass(TableEditingComponent, [{
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/company.json");
+
+          req.onload = function () {
+            cb(JSON.parse(req.response));
+          };
+
+          req.send();
+        }
+      }, {
+        key: "updateValue",
+        value: function updateValue(event, cell, cellValue, row) {
+          this.editing[row.$$index + '-' + cell] = false;
+          this.rows[row.$$index][cell] = event.target.value;
+        }
+      }]);
+
+      return TableEditingComponent;
+    }();
+
+    TableEditingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table-editing',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./table-editing.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-editing/table-editing.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./table-editing.component.scss */
+      "./src/app/datatable/table-editing/table-editing.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], TableEditingComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-filter/table-filter.component.scss":
+  /*!********************************************************************!*\
+    !*** ./src/app/datatable/table-filter/table-filter.component.scss ***!
+    \********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableTableFilterTableFilterComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RhdGF0YWJsZS90YWJsZS1maWx0ZXIvdGFibGUtZmlsdGVyLmNvbXBvbmVudC5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-filter/table-filter.component.ts":
+  /*!******************************************************************!*\
+    !*** ./src/app/datatable/table-filter/table-filter.component.ts ***!
+    \******************************************************************/
+
+  /*! exports provided: TableFilterComponent */
+
+  /***/
+  function srcAppDatatableTableFilterTableFilterComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TableFilterComponent", function () {
+      return TableFilterComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var TableFilterComponent = /*#__PURE__*/function () {
+      function TableFilterComponent() {
+        var _this3 = this;
+
+        _classCallCheck(this, TableFilterComponent);
+
+        this.rows = [];
+        this.temp = [];
+        this.columns = [{
+          prop: 'name'
+        }, {
+          name: 'Company'
+        }, {
+          name: 'Gender'
+        }];
+        this.fetch(function (data) {
+          // cache our list
+          _this3.temp = _toConsumableArray(data); // push our inital complete list
+
+          _this3.rows = data;
+        });
+      }
+
+      _createClass(TableFilterComponent, [{
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/company.json");
+
+          req.onload = function () {
+            cb(JSON.parse(req.response));
+          };
+
+          req.send();
+        }
+      }, {
+        key: "updateFilter",
+        value: function updateFilter(event) {
+          var val = event.target.value; // filter our data
+
+          var temp = this.temp.filter(function (d) {
+            return d.name.toLowerCase().indexOf(val) !== -1 || !val;
+          }); // update the rows
+
+          this.rows = temp;
+        }
+      }]);
+
+      return TableFilterComponent;
+    }();
+
+    TableFilterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table-filter',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./table-filter.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-filter/table-filter.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./table-filter.component.scss */
+      "./src/app/datatable/table-filter/table-filter.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], TableFilterComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-paging/table-paging.component.scss":
+  /*!********************************************************************!*\
+    !*** ./src/app/datatable/table-paging/table-paging.component.scss ***!
+    \********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableTablePagingTablePagingComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RhdGF0YWJsZS90YWJsZS1wYWdpbmcvdGFibGUtcGFnaW5nLmNvbXBvbmVudC5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-paging/table-paging.component.ts":
+  /*!******************************************************************!*\
+    !*** ./src/app/datatable/table-paging/table-paging.component.ts ***!
+    \******************************************************************/
+
+  /*! exports provided: TablePagingComponent */
+
+  /***/
+  function srcAppDatatableTablePagingTablePagingComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TablePagingComponent", function () {
+      return TablePagingComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var TablePagingComponent = /*#__PURE__*/function () {
+      function TablePagingComponent() {
+        _classCallCheck(this, TablePagingComponent);
+
+        this.rows = [];
+        this.count = 0;
+        this.offset = 0;
+        this.limit = 10;
+      }
+
+      _createClass(TablePagingComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.page(this.offset, this.limit);
+        }
+      }, {
+        key: "page",
+        value: function page(offset, limit) {
+          var _this4 = this;
+
+          this.fetch(function (results) {
+            _this4.count = results.length;
+            var start = offset * limit;
+            var end = start + limit;
+
+            var rows = _toConsumableArray(_this4.rows);
+
+            for (var i = start; i < end; i++) {
+              rows[i] = results[i];
+            }
+
+            _this4.rows = rows;
+            console.log('Page Results', start, end, rows);
+          });
+        }
+      }, {
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/company.json");
+
+          req.onload = function () {
+            cb(JSON.parse(req.response));
+          };
+
+          req.send();
+        }
+      }, {
+        key: "onPage",
+        value: function onPage(event) {
+          console.log('Page Event', event);
+          this.page(event.offset, event.limit);
+        }
+      }]);
+
+      return TablePagingComponent;
+    }();
+
+    TablePagingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table-paging',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./table-paging.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-paging/table-paging.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./table-paging.component.scss */
+      "./src/app/datatable/table-paging/table-paging.component.scss"))["default"]]
+    })], TablePagingComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-pinning/table-pinning.component.scss":
+  /*!**********************************************************************!*\
+    !*** ./src/app/datatable/table-pinning/table-pinning.component.scss ***!
+    \**********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableTablePinningTablePinningComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".datatable,\n.datatable > div,\n.datatable.fixed-header .datatable-header .datatable-header-inner {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGF0YXRhYmxlL3RhYmxlLXBpbm5pbmcvQzpcXFVzZXJzXFxhbmRyZVxcRG9jdW1lbnRzXFxXb3Jrc3BhY2VcXFByaW50RXZvQXBwXFxwcmludGV2b3dlYi9zcmNcXGFwcFxcZGF0YXRhYmxlXFx0YWJsZS1waW5uaW5nXFx0YWJsZS1waW5uaW5nLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXRhdGFibGUvdGFibGUtcGlubmluZy90YWJsZS1waW5uaW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7RUFHRSxZQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9kYXRhdGFibGUvdGFibGUtcGlubmluZy90YWJsZS1waW5uaW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRhdGF0YWJsZSxcclxuLmRhdGF0YWJsZT5kaXYsXHJcbi5kYXRhdGFibGUuZml4ZWQtaGVhZGVyIC5kYXRhdGFibGUtaGVhZGVyIC5kYXRhdGFibGUtaGVhZGVyLWlubmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuIiwiLmRhdGF0YWJsZSxcbi5kYXRhdGFibGUgPiBkaXYsXG4uZGF0YXRhYmxlLmZpeGVkLWhlYWRlciAuZGF0YXRhYmxlLWhlYWRlciAuZGF0YXRhYmxlLWhlYWRlci1pbm5lciB7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-pinning/table-pinning.component.ts":
+  /*!********************************************************************!*\
+    !*** ./src/app/datatable/table-pinning/table-pinning.component.ts ***!
+    \********************************************************************/
+
+  /*! exports provided: TablePinningComponent */
+
+  /***/
+  function srcAppDatatableTablePinningTablePinningComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TablePinningComponent", function () {
+      return TablePinningComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var TablePinningComponent = /*#__PURE__*/function () {
+      function TablePinningComponent() {
+        var _this5 = this;
+
+        _classCallCheck(this, TablePinningComponent);
+
+        this.rows = [];
+        this.fetch(function (data) {
+          _this5.rows = data;
+        });
+      }
+
+      _createClass(TablePinningComponent, [{
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/100k.json");
+
+          req.onload = function () {
+            cb(JSON.parse(req.response));
+          };
+
+          req.send();
+        }
+      }]);
+
+      return TablePinningComponent;
+    }();
+
+    TablePinningComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table-pinning',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./table-pinning.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-pinning/table-pinning.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./table-pinning.component.scss */
+      "./src/app/datatable/table-pinning/table-pinning.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], TablePinningComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-selection/table-selection.component.scss":
+  /*!**************************************************************************!*\
+    !*** ./src/app/datatable/table-selection/table-selection.component.scss ***!
+    \**************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableTableSelectionTableSelectionComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RhdGF0YWJsZS90YWJsZS1zZWxlY3Rpb24vdGFibGUtc2VsZWN0aW9uLmNvbXBvbmVudC5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-selection/table-selection.component.ts":
+  /*!************************************************************************!*\
+    !*** ./src/app/datatable/table-selection/table-selection.component.ts ***!
+    \************************************************************************/
+
+  /*! exports provided: TableSelectionComponent */
+
+  /***/
+  function srcAppDatatableTableSelectionTableSelectionComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TableSelectionComponent", function () {
+      return TableSelectionComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var TableSelectionComponent = /*#__PURE__*/function () {
+      function TableSelectionComponent() {
+        var _this6 = this;
+
+        _classCallCheck(this, TableSelectionComponent);
+
+        this.rows = [];
+        this.selected = [];
+        this.columns = [{
+          prop: 'name'
+        }, {
+          name: 'Company'
+        }, {
+          name: 'Gender'
+        }];
+        this.fetch(function (data) {
+          _this6.rows = data;
+        });
+      }
+
+      _createClass(TableSelectionComponent, [{
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/company.json");
+
+          req.onload = function () {
+            cb(JSON.parse(req.response));
+          };
+
+          req.send();
+        }
+      }, {
+        key: "onSelect",
+        value: function onSelect(event) {
+          console.log('Event: select', event, this.selected);
+        }
+      }, {
+        key: "onActivate",
+        value: function onActivate(event) {
+          console.log('Event: activate', event);
+        }
+      }]);
+
+      return TableSelectionComponent;
+    }();
+
+    TableSelectionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table-selection',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./table-selection.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-selection/table-selection.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./table-selection.component.scss */
+      "./src/app/datatable/table-selection/table-selection.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], TableSelectionComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-sorting/table-sorting.component.scss":
+  /*!**********************************************************************!*\
+    !*** ./src/app/datatable/table-sorting/table-sorting.component.scss ***!
+    \**********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppDatatableTableSortingTableSortingComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".datatable,\n.datatable > div,\n.datatable.fixed-header .datatable-header .datatable-header-inner {\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGF0YXRhYmxlL3RhYmxlLXNvcnRpbmcvQzpcXFVzZXJzXFxhbmRyZVxcRG9jdW1lbnRzXFxXb3Jrc3BhY2VcXFByaW50RXZvQXBwXFxwcmludGV2b3dlYi9zcmNcXGFwcFxcZGF0YXRhYmxlXFx0YWJsZS1zb3J0aW5nXFx0YWJsZS1zb3J0aW5nLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXRhdGFibGUvdGFibGUtc29ydGluZy90YWJsZS1zb3J0aW5nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7RUFHRSxZQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9kYXRhdGFibGUvdGFibGUtc29ydGluZy90YWJsZS1zb3J0aW5nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRhdGF0YWJsZSxcclxuLmRhdGF0YWJsZT5kaXYsXHJcbi5kYXRhdGFibGUuZml4ZWQtaGVhZGVyIC5kYXRhdGFibGUtaGVhZGVyIC5kYXRhdGFibGUtaGVhZGVyLWlubmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuIiwiLmRhdGF0YWJsZSxcbi5kYXRhdGFibGUgPiBkaXYsXG4uZGF0YXRhYmxlLmZpeGVkLWhlYWRlciAuZGF0YXRhYmxlLWhlYWRlciAuZGF0YXRhYmxlLWhlYWRlci1pbm5lciB7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/datatable/table-sorting/table-sorting.component.ts":
+  /*!********************************************************************!*\
+    !*** ./src/app/datatable/table-sorting/table-sorting.component.ts ***!
+    \********************************************************************/
+
+  /*! exports provided: TableSortingComponent */
+
+  /***/
+  function srcAppDatatableTableSortingTableSortingComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TableSortingComponent", function () {
+      return TableSortingComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var TableSortingComponent = /*#__PURE__*/function () {
+      function TableSortingComponent() {
+        var _this7 = this;
+
+        _classCallCheck(this, TableSortingComponent);
+
+        this.rows = [];
+        this.columns = [{
+          name: 'Company'
+        }, {
+          name: 'Name'
+        }, {
+          name: 'Gender'
+        }];
+        this.fetch(function (data) {
+          _this7.rows = data;
+        });
+      }
+
+      _createClass(TableSortingComponent, [{
+        key: "fetch",
+        value: function fetch(cb) {
+          var req = new XMLHttpRequest();
+          req.open('GET', "assets/data/company.json");
+
+          req.onload = function () {
+            var data = JSON.parse(req.response);
+            cb(data);
+          };
+
+          req.send();
+        }
+      }]);
+
+      return TableSortingComponent;
+    }();
+
+    TableSortingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table-sorting',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./table-sorting.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/datatable/table-sorting/table-sorting.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./table-sorting.component.scss */
+      "./src/app/datatable/table-sorting/table-sorting.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], TableSortingComponent);
+    /***/
+  }
+}]);
+//# sourceMappingURL=datatable-datatable-module-es5.js.map
